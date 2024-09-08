@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editable resume builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="cv-form">
+      <h1 class="main-heading">Editable Resume Builder by Ayesha</h1>
+      <form >
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone</label>
+          <input type="number" name="phone" id="phone" required />
+        </fieldset>
+
+        <!-- Education -->
+        <fieldset>
+          <legend>Education</legend>
+          <label for="education">Education</label>
+          <textarea
+            name="education"
+            id="education"
+            required
+            rows="4"
+          ></textarea>
+          <br />
+        </fieldset>
+        <!-- Experience -->
+        <fieldset>
+          <legend>Experience</legend>
+          <label for="experience">Experience</label>
+          <textarea
+            name="experience"
+            id="experience"
+            required
+            rows="4"
+          ></textarea>
+          <br />
+        </fieldset>
+        <!--  Skills -->
+        <fieldset>
+          <legend>Skills</legend>
+          <label for="skills">Skills</label>
+          <textarea name="skills" id="skills" required rows="4"></textarea>
+          <br />
+        </fieldset>
+
+        <button id="submit-btn" type="submit">Generate Resume Below</button>
+      </form>
+    </div>
+
+    <div class="output"></div>
+
+    <div class="container" id="resume-output">
+      <h1 id="output-head">Resume</h1>
+
+       <p id="resumeName"> <strong style="font-weight: 800;">Name:</strong></p>
+      <p id="resumeEmail"><strong style="font-weight: 800;">Email:</strong></p>
+      <p id="resumePhone"><strong style="font-weight: 800;">Phone:</strong></p><hr>
+      <h3>Education:</h3>
+      <p id="resumeEducation"></p>
+      <hr>
+      <h3>Experience:</h3>
+      <p id="resumeExperience"></p>
+      <hr>
+      <h3>Skills:</h3>
+      <p id="resumeSkils"></p>
+    </div>
+
+    <button id="edit-btn" class="output">Edit Resume</button>
+
+
+    <script src="app.js"></script>
+  </body>
+</html>
