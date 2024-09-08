@@ -1,43 +1,50 @@
 * {
-  padding: 20px;
+  padding: 13px;
   margin: 0;
   font-family: sans-serif;
-  background-color: #f4f7f6;
+  background-color: #454040;
+  outline: no;
+}
+
+body {
+  color: white;
 }
 form {
   max-width: 700px;
   margin: 0 auto;
   border-radius: 12px;
-  /* border: none; */
   padding: 30px;
   border-top: 6px solid rgb(171, 37, 93);
   box-shadow: 0 20px 30px 2px rgba(0, 0, 0, 0.349);
   border-bottom: 6px solid rgb(171, 37, 93);
-  background-color: #273034;
+  background-color: #2a2727;
 }
 .main-heading {
   text-align: center;
   font-size: 2.4rem;
-  text-shadow: 0 2px 3px#ff1515, 0 3px 80px #ff4815;
+  text-shadow: 0 2px 6px#ff0000;
 }
 fieldset {
   border: none;
   border-radius: 20px;
   margin-bottom: 30px;
+  background-color: #433b3f;
 }
 legend {
   font-size: 1.5rem;
   font-weight: 700;
+  width: 40%;
   padding-bottom: 9px;
-  margin-bottom: 20px;
-  box-shadow: 0 10px 9px 0 rgb(161, 118, 118);
+  margin-bottom: 15px;
+  border: 2px solid rgb(145, 33, 33);
+  box-shadow: 0 10px 9px 0 rgb(36, 28, 28);
   border-radius: 10px;
 }
 label {
   font-size: 1.6rem;
   margin-bottom: 1px;
   font-weight: 700;
-  color: #915013;
+  color: white;
   display: block;
 }
 
@@ -53,9 +60,17 @@ textarea {
   border: 2px solid #bdc3c7;
   box-sizing: border-box;
   background-color: #ecf0f1;
-  font-size: 1rem;
+  font-size: 1.3rem;
   transition: all 0.3s ease;
+  outline: none;
 }
+input:hover {
+  border: 3px solid rgb(183, 3, 3);
+}
+textarea:hover {
+  border: 3px solid rgb(183, 3, 3);
+}
+
 #submit-btn {
   padding: 12px;
   margin-top: 6px;
@@ -83,23 +98,31 @@ textarea {
   border-radius: 12px;
   background-color: #b5602b;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  color: #2c3e50;
+  color: #ececec;
   font-family: "Poppins", sans-serif;
 }
 
 #resume-output h3 {
   font-size: 1.9rem;
   letter-spacing: 2px;
-  color: #bc356b;
+  color: #ffffff;
   font-weight: 800;
   display: flex;
   align-items: center;
 }
+footer {
+  bottom: 0;
+  text-align: center;
+  background-color: #2d2727;
+  font-size: 1rem;
+  font-family: monospace;
+}
 
 #output-head {
+  color: white;
   text-align: center;
   font-size: 3rem;
-  font-family: monospace;
+  font-family: cursive;
 }
 
 .output {
@@ -112,7 +135,7 @@ textarea {
   padding: 9px;
   border: 2px solid rgb(242, 49, 49);
   border-radius: 12px;
-  background-color: rgb(185, 15, 134);
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   color: #f0f0f0;
   font-family: "Poppins", sans-serif;
@@ -122,13 +145,15 @@ textarea {
   width: 300px;
   padding: 12px;
   font-size: 1.6rem;
-  background-color: rgb(195, 100, 11);
+  background-color: rgb(72, 68, 68);
   cursor: pointer;
   transition: 0.3s ease;
 }
 
 #edit-btn:hover {
+  background-color: #262425;
   opacity: 0.8;
+  box-shadow: 3px 7px 20px 3px rgb(144, 37, 37);
   transform: scale(1.05);
 }
 
@@ -151,8 +176,13 @@ textarea {
 @media only screen and (max-width: 480px) {
   h1,
   legend {
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 1px;
+  }
+  #edit-btn {
+    width: 200px;
+    padding: 9px;
+    font-size: 1.3rem;
   }
   .main-heading {
     text-align: center;
@@ -186,4 +216,38 @@ textarea {
     font-size: 0.8rem;
     transition: all 0.3s ease;
   }
+  legend {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .foot {
+    flex-wrap: wrap;
+  }
+}
+
+.foot {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.click {
+  width: 200px;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 1.3rem;
+  background-color: #925c0d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.click:hover {
+  background-color: #925c0d;
+  opacity: 0.8;
+  border: 2px solid rgb(174, 120, 49);
+  box-shadow: 3px 7px 20px 1px #ce8414;
+  transform: scale(1.05);
 }

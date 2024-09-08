@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Editable resume builder</title>
+    <title>Milestone-Based Interactive Resume Builder</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container" id="cv-form">
-      <h1 class="main-heading">Editable Resume Builder by Ayesha</h1>
-      <form >
+      <h1 class="main-heading">Unique Path and Shareable Link by Ayesha</h1>
+      <form>
         <fieldset>
           <legend>Personal Information</legend>
 
@@ -64,22 +64,31 @@
     <div class="container" id="resume-output">
       <h1 id="output-head">Resume</h1>
 
-       <p id="resumeName"> <strong style="font-weight: 800;">Name:</strong></p>
-      <p id="resumeEmail"><strong style="font-weight: 800;">Email:</strong></p>
-      <p id="resumePhone"><strong style="font-weight: 800;">Phone:</strong></p><hr>
+      <p id="resumeName"><strong style="font-weight: 800">Name:</strong></p>
+      <p id="resumeEmail"><strong style="font-weight: 800">Email:</strong></p>
+      <p id="resumePhone"><strong style="font-weight: 800">Phone:</strong></p>
+      <hr />
       <h3>Education:</h3>
       <p id="resumeEducation"></p>
-      <hr>
+      <hr />
       <h3>Experience:</h3>
       <p id="resumeExperience"></p>
-      <hr>
+      <hr />
       <h3>Skills:</h3>
       <p id="resumeSkils"></p>
     </div>
 
     <button id="edit-btn" class="output">Edit Resume</button>
 
+    <div class="foot">
+      <button id="print-btn" class="click">Download pdf</button>
+      <button id="share-btn" class="click">Share Resume</button>
+    </div>
 
+    <footer>Made by GIAIC Student &#9829; AYESHA</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

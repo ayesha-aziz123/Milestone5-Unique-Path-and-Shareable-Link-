@@ -1,3 +1,6 @@
+import "print-this";
+
+
 let resumeForm = document.querySelector("#cv-form") as HTMLElement
 let resumeOutput = document.querySelector("#resume-output") as HTMLInputElement
 let editBtn = document.querySelector("#edit-btn") as HTMLElement
@@ -57,3 +60,32 @@ editBtn?.addEventListener("click", () => {
 
 
 });
+
+
+const shareBtn = document.querySelector("#share-btn") as HTMLElement;
+
+shareBtn?.addEventListener("click", () => {
+    const resumeText = `
+    Name: ${(document.getElementById("resumeName") as HTMLElement).innerText}
+    Email: ${(document.getElementById("resumeEmail") as HTMLElement).innerText}
+    Phone: ${(document.getElementById("resumePhone") as HTMLElement).innerText}
+    Education: ${(document.getElementById("resumeEducation") as HTMLElement).innerText}
+    Experience: ${(document.getElementById("resumeExperience") as HTMLElement).innerText}
+    Skills: ${(document.getElementById("resumeSkils") as HTMLElement).innerText}
+    `;
+
+    navigator.clipboard.writeText(resumeText).then(() => {
+        alert("Resume copied to clipboard! You can share it now.");
+    }).catch(err => {
+        alert("Failed to copy resume.");
+        console.error(err);
+    });
+});
+
+
+
+$(document).ready(function() {
+    $("#print-btn").on("click",function(){
+        $("#resume-output").printThis();
+    });
+  });
