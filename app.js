@@ -1,6 +1,4 @@
 "use strict";
-// Object.defineProperty(exports, "__esModule", { value: true });
-// require("print-this");
 let resumeForm = document.querySelector("#cv-form");
 let resumeOutput = document.querySelector("#resume-output");
 let editBtn = document.querySelector("#edit-btn");
@@ -13,6 +11,7 @@ resumeForm?.addEventListener("submit", (evt) => {
     const education = document.getElementById("education");
     const experience = document.getElementById("experience");
     const skills = document.getElementById("skills");
+    const username = document.getElementById("username");
     if (!name || !email || !phone || !education || !experience || !skills) {
         alert("please fill all field");
         return;
@@ -23,7 +22,28 @@ resumeForm?.addEventListener("submit", (evt) => {
     document.getElementById("resumeEducation").innerText = `Education: ${education.value}`;
     document.getElementById("resumeExperience").innerText = `Experience: ${experience.value}`;
     document.getElementById("resumeSkils").innerText = `Skills: ${skills.value}`;
+    document.getElementById("resumeUrl").innerText = `Unique path: ${username.value}`;
+    // shareable link
+    const shareBtn = document.querySelector("#share-btn");
+    shareBtn.addEventListener("click", async () => {
+        try {
+            const shareableLink = `https://milestone5-unique-path-and-shareable-link-ayesha.vercel.app/?username.value/${name.value.replace(/\s+/g, '_')}`;
+            await navigator.clipboard.writeText(shareableLink);
+            alert("Shareable linkcopied to Clipboard!");
+        }
+        catch (err) {
+            alert("Failed to copy link clipboard . please try again!");
+        }
+    });
 });
+// unique path
+let username = document.getElementById("username");
+const uniquePath = `resume/${username.value.replace(/\s+/g, '_')}_cv.html`;
+const downloadLink = document.createElement("a");
+downloadLink.href = `data:text/html;charset=utf-8,` + encodeURIComponent(resumeOutput.value);
+downloadLink.download = uniquePath;
+downloadLink.textContent = "Download your resume";
+resumeOutput.appendChild(downloadLink);
 // Edit Resume button functionality
 editBtn?.addEventListener("click", () => {
     resumeForm.style.display = "block"; // Show the form again
@@ -44,23 +64,7 @@ editBtn?.addEventListener("click", () => {
     document.getElementById("experience").value = experience ?? '';
     document.getElementById("skills").value = skills ?? '';
 });
-const shareBtn = document.querySelector("#share-btn");
-shareBtn?.addEventListener("click", () => {
-    const resumeText = `
-    Name: ${document.getElementById("resumeName").innerText}
-    Email: ${document.getElementById("resumeEmail").innerText}
-    Phone: ${document.getElementById("resumePhone").innerText}
-    Education: ${document.getElementById("resumeEducation").innerText}
-    Experience: ${document.getElementById("resumeExperience").innerText}
-    Skills: ${document.getElementById("resumeSkils").innerText}
-    `;
-    navigator.clipboard.writeText(resumeText).then(() => {
-        alert("Resume copied to clipboard! You can share it now.");
-    }).catch(err => {
-        alert("Failed to copy resume.");
-        console.error(err);
-    });
-});
+// download pdf
 $(document).ready(function () {
     $("#print-btn").on("click", function () {
         $("#resume-output").printThis();

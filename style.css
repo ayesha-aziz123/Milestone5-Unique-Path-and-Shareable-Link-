@@ -101,6 +101,11 @@ textarea:hover {
   color: #ececec;
   font-family: "Poppins", sans-serif;
 }
+a{
+  display: block;
+  color: #c36948;
+  font-size: 1.2rem;
+}
 
 #resume-output h3 {
   font-size: 1.9rem;

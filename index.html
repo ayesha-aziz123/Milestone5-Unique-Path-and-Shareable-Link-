@@ -10,8 +10,12 @@
     <div class="container" id="cv-form">
       <h1 class="main-heading">Unique Path and Shareable Link by Ayesha</h1>
       <form>
+
+
         <fieldset>
           <legend>Personal Information</legend>
+          <label for="username">Resume Url:</label>
+          <input type="text" name="username" id="username">
 
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required />
@@ -76,19 +80,22 @@
       <hr />
       <h3>Skills:</h3>
       <p id="resumeSkils"></p>
+      <hr>
+      <h3>Unique URL:</h3>
+      <p id="resumeUrl"></p>
     </div>
 
     <button id="edit-btn" class="output">Edit Resume</button>
 
     <div class="foot">
-      <button id="print-btn" class="click">Download pdf</button>
-      <button id="share-btn" class="click">Share Resume</button>
+      <button id="print-btn" class="click" >Download pdf</button>
+      <button id="share-btn" class="click">Shareable Link</button>
     </div>
 
     <footer>Made by GIAIC Student &#9829; AYESHA</footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.js"></script>
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
   </body>
 </html>

@@ -1,10 +1,9 @@
+// import jQuery from "jquery";
 import "print-this";
-
 
 let resumeForm = document.querySelector("#cv-form") as HTMLElement
 let resumeOutput = document.querySelector("#resume-output") as HTMLInputElement
 let editBtn = document.querySelector("#edit-btn") as HTMLElement
-
 
 
 resumeForm?.addEventListener("submit", (evt) => {
@@ -17,20 +16,53 @@ resumeForm?.addEventListener("submit", (evt) => {
     const education = document.getElementById("education") as HTMLInputElement
     const experience = document.getElementById("experience") as HTMLInputElement
     const skills = document.getElementById("skills") as HTMLInputElement
+    const username = document.getElementById("username") as HTMLInputElement
+
 
     if (!name || !email || !phone || !education || !experience || !skills) {
         alert("please fill all field");
         return;
     }
-
     (document.getElementById("resumeName") as HTMLElement).innerText = `Name: ${name.value}`;
     (document.getElementById("resumeEmail") as HTMLElement).innerText = `Email: ${email.value}`;
     (document.getElementById("resumePhone") as HTMLElement).innerText = `Phone: ${phone.value}`;
     (document.getElementById("resumeEducation") as HTMLElement).innerText = `Education: ${education.value}`;
     (document.getElementById("resumeExperience") as HTMLElement).innerText = `Experience: ${experience.value}`;
-    (document.getElementById("resumeSkils") as HTMLElement).innerText = `Skills: ${skills.value}`
+    (document.getElementById("resumeSkils") as HTMLElement).innerText = `Skills: ${skills.value}`;
+    (document.getElementById("resumeUrl") as HTMLElement).innerText = `Unique path: ${username.value}`;
 
+
+
+    // shareable link
+    const shareBtn = document.querySelector("#share-btn") as HTMLElement;
+    shareBtn.addEventListener("click", async () => {
+        try {
+            const shareableLink = `https://milestone5-unique-path-and-shareable-link-ayesha.vercel.app/?username.value/${name.value.replace(/\s+/g, '_')}`
+
+            await navigator.clipboard.writeText(shareableLink)
+            alert("Shareable linkcopied to Clipboard!")
+        } catch (err) {
+            alert("Failed to copy link clipboard . please try again!")
+        }
+
+    })
+
+
+
+    
+    
 })
+
+// unique path
+let username = document.getElementById("username") as HTMLInputElement
+const uniquePath = `resume/${username.value.replace(/\s+/g, '_')}_cv.html`;
+const downloadLink = document.createElement("a");
+downloadLink.href = `data:text/html;charset=utf-8,` + encodeURIComponent(resumeOutput.value);
+downloadLink.download = uniquePath;
+downloadLink.textContent = "Download your resume";
+resumeOutput.appendChild(downloadLink);
+
+
 
 
 // Edit Resume button functionality
@@ -39,6 +71,8 @@ editBtn?.addEventListener("click", () => {
     resumeForm.style.display = "block"; // Show the form again
     resumeOutput.style.display = "none"; // Hide the resume output
     editBtn.style.display = "none"; // Hide the edit button
+
+
 
 
 
@@ -59,33 +93,15 @@ editBtn?.addEventListener("click", () => {
     (document.getElementById("skills") as HTMLInputElement).value = skills ?? '';
 
 
+
+
+
 });
 
 
-const shareBtn = document.querySelector("#share-btn") as HTMLElement;
-
-shareBtn?.addEventListener("click", () => {
-    const resumeText = `
-    Name: ${(document.getElementById("resumeName") as HTMLElement).innerText}
-    Email: ${(document.getElementById("resumeEmail") as HTMLElement).innerText}
-    Phone: ${(document.getElementById("resumePhone") as HTMLElement).innerText}
-    Education: ${(document.getElementById("resumeEducation") as HTMLElement).innerText}
-    Experience: ${(document.getElementById("resumeExperience") as HTMLElement).innerText}
-    Skills: ${(document.getElementById("resumeSkils") as HTMLElement).innerText}
-    `;
-
-    navigator.clipboard.writeText(resumeText).then(() => {
-        alert("Resume copied to clipboard! You can share it now.");
-    }).catch(err => {
-        alert("Failed to copy resume.");
-        console.error(err);
-    });
-});
-
-
-
-$(document).ready(function() {
-    $("#print-btn").on("click",function(){
+// download pdf
+$(document).ready(function () {
+    $("#print-btn").on("click", function () {
         $("#resume-output").printThis();
     });
-  });
+});
