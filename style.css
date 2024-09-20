@@ -87,7 +87,7 @@ textarea:hover {
   opacity: 0.7;
 }
 
-#resume-output {
+#resume-output{
   display: none;
 }
 
@@ -238,6 +238,7 @@ footer {
   align-items: center;
 }
 .click {
+  display: none;
   width: 200px;
   margin-bottom: 10px;
   padding: 20px;
@@ -255,4 +256,7 @@ footer {
   border: 2px solid rgb(174, 120, 49);
   box-shadow: 3px 7px 20px 1px #ce8414;
   transform: scale(1.05);
+}
+.output{
+  display: none;
 }

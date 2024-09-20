@@ -1,17 +1,24 @@
 "use strict";
+// Object.defineProperty(exports, "__esModule", { value: true });
+// // import jQuery from "jquery";
+// require("print-this");
 let resumeForm = document.querySelector("#cv-form");
 let resumeOutput = document.querySelector("#resume-output");
 let editBtn = document.querySelector("#edit-btn");
+let shareBtn = document.querySelector("#share-btn");
+let printBtn = document.querySelector("#print-btn");
 resumeForm?.addEventListener("submit", (evt) => {
     evt.preventDefault();
     resumeOutput.style.display = "block";
+    shareBtn.style.display = "block";
+    editBtn.style.display = "block";
+    printBtn.style.display = "block";
     const name = document.getElementById("name");
     const email = document.getElementById("email");
     const phone = document.getElementById("phone");
     const education = document.getElementById("education");
     const experience = document.getElementById("experience");
     const skills = document.getElementById("skills");
-    const username = document.getElementById("username");
     if (!name || !email || !phone || !education || !experience || !skills) {
         alert("please fill all field");
         return;
@@ -22,9 +29,7 @@ resumeForm?.addEventListener("submit", (evt) => {
     document.getElementById("resumeEducation").innerText = `Education: ${education.value}`;
     document.getElementById("resumeExperience").innerText = `Experience: ${experience.value}`;
     document.getElementById("resumeSkils").innerText = `Skills: ${skills.value}`;
-    document.getElementById("resumeUrl").innerText = `Unique path: ${username.value}`;
     // shareable link
-    const shareBtn = document.querySelector("#share-btn");
     shareBtn.addEventListener("click", async () => {
         try {
             const shareableLink = `https://milestone5-unique-path-and-shareable-link-ayesha.vercel.app/?username.value/${name.value.replace(/\s+/g, '_')}`;
@@ -36,19 +41,13 @@ resumeForm?.addEventListener("submit", (evt) => {
         }
     });
 });
-// unique path
-let username = document.getElementById("username");
-const uniquePath = `resume/${username.value.replace(/\s+/g, '_')}_cv.html`;
-const downloadLink = document.createElement("a");
-downloadLink.href = `data:text/html;charset=utf-8,` + encodeURIComponent(resumeOutput.value);
-downloadLink.download = uniquePath;
-downloadLink.textContent = "Download your resume";
-resumeOutput.appendChild(downloadLink);
 // Edit Resume button functionality
 editBtn?.addEventListener("click", () => {
     resumeForm.style.display = "block"; // Show the form again
     resumeOutput.style.display = "none"; // Hide the resume output
     editBtn.style.display = "none"; // Hide the edit button
+    shareBtn.style.display = "none";
+    printBtn.style.display = "none";
     // Repopulate the form with current resume data
     const name = document.getElementById("resumeName")?.innerText.split(': ')[1];
     const email = document.getElementById("resumeEmail")?.innerText.split(': ')[1];
