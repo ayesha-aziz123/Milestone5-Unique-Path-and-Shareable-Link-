@@ -3,92 +3,373 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Milestone-Based Interactive Resume Builder</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-
   <body>
-    <div class="container" id="cv-form">
-      <h1 class="main-heading">Unique Path and Shareable Link by Ayesha</h1>
-      <form>
-        <fieldset>
-          <legend>Personal Information</legend>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
+    <div class="container1" id="cv-form">
+      <h1 style="text-align: center; color: rgb(9, 8, 8); background-color: rgb(172, 73, 73); margin-bottom: 40px; letter-spacing: 2px; font-family: cursive;"> Resume </h1>
+      <div class="box1-generate">
+        <!-- first col -->
+        <div class="col1">
+          <h3 id="heading">Personal Information</h3>
+          <form>
+            <div class="form-group">
+              <label for="nameField"> Name</label>
+               <input
+               required
+              type="text"
+              id="nameField"
+              class="form-control"
+              placeholder="Enter here"
+            />
+            </div>
+           <div class="form-group">
+             <label for="emailField"> Email</label>
+            <input
+            required
+              type="email"
+              id="emailField"
+              class="form-control"
+              placeholder="Enter here"
+            />
+           </div>
+           
+           
+       <div class="form-group">
+       <label for="contactField"> Phone</label>
+            <input
+            required
+              type="number"
+              id="contactField"
+              class="form-control"
+              placeholder="Enter Phone"
+            />
+        </div>
+        
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+        <div class="form-group">
+          <label for="currently_live">Currently Live</label>
+         <input
+         required
+           type="text"
+           id="currently_live"
+           class="form-control"
+           placeholder="Enter here"
+         />
+        </div>
 
-          <label for="phone">Phone</label>
-          <input type="number" name="phone" id="phone" required />
-        </fieldset>
+        <div class="form-group">
+          <label for="dateField" >Date of Birth</label>
+               <input
+                 type="date"
+                 id="dateField"
+                 class="form-control"
+               />
+           </div>
+
+           <div class="form-group">
+            <label for="">Select your photo</label>
+             <input
+             
+               rows="5"
+               type="file"
+               id="imageField"
+               class="form-control"
+             />
+           </div>
+ 
+           
+
+         
+        <div class="form-group">
+           <label for="addressField">Address</label>
+            <textarea
+
+              rows="2"
+              type="text"
+              id="addressField"
+              class="form-control"
+              placeholder="Enter here"
+            ></textarea>
+        </div>
+          
+          
+          
+          <h4>Important Links</h4>
+          <!-- links -->
+         
+
+          <div class="form-group ">
+              <label for="GithubField">Github</label>
+              <input type="text" id="GithubField" class="form-control" placeholder="Enter Github URL">
+          </div>
+          
+         <div class="form-group ">
+          <label for="linkedinField">LinkedIn</label>
+          <input type="text" id="linkedinField" class="form-control" placeholder="Enter Linkedin URL">
+         </div>
+
+                <!-- Skills Section -->
+                <div class="form-group ">
+                  <label for="skills">Skills</label>
+                  <textarea required rows="3" placeholder="comma (seperated)" id="skills" class="form-control sfield "></textarea>
+                </div>
+            </div>
+           
+          
+          <!-- second col -->
+        <div class="col2">
+        <h3 id="heading">Professional Information</h3>
+
+        <!-- Education section -->
+       <div class="form-group" id="education"  style="margin-top: 20px;">
+        <h3>Education</h3>
+
+        <!-- School -->
+        <label>School:</label>
+        <input required type="text" id="degree" placeholder="School Name" >
+        <label>Institution:</label>
+        <input required type="text" id="institution" placeholder="Institution" >
+        <label>Start Year:</label>
+        <input required type="number" id="graduation-date-start">
+        <label>End Year:</label>
+        <input required type="number" id="graduation-date-end" >
+
+
+        <!-- College -->
+        <!-- <label>College:</label>
+        <input type="text" id="degree2" placeholder="College Name" >
+        <label>Institution:</label>
+        <input type="text" id="institution2" placeholder="Institution2" >
+        <label>Start Year:</label>
+        <input type="number" id="college-start-date">
+        <label>End Year:</label>
+        <input type="number" id="college-end-date" > -->
+      </div>
+
+          
+          <!-- Work Experience Section -->
+      <div class="form-group" id="work-experience" style="margin-top: 30px;">
+        <h3>Work Experience</h3>
+        <label>Job Title:</label>
+        <input type="text" id="job-title" placeholder="Job Title" >
+
+        <label>Company:</label>
+        <input required type="text" id="company" placeholder="Company" >
+
+        <label>Description:</label>
+        <input required type="text" id="job-description" placeholder="Job description" ></input>
+        <label>Start Year:</label>
+        <input required type="number" id="start-date" >
+        <label>End Year:</label>
+        <input required type="number" id="end-date" >      
+       </div>
+     </div>
+        
+      </div>
+
+      <div class="button">
+        <button>Generate CV</button>
+      </div>
+    </form>
+
+
+  </div>
+
+
+
+
+<!-- ***************************************************************************************************************** -->
+
+
+  <div class="wrapper" id="cv-template">
+    <div class="container" >
+      <!-- content -->
+      <div class="box1">
+        <div id="hide-img2">
+          <img
+            src=""
+            alt="profile pic"
+            width="100%"
+            style="object-fit: cover"
+            id="imgTemplate-hide"
+            
+          />
+        </div>
+        <h1 id="nameT" style="letter-spacing: 5px; margin-bottom: 20px; text-align: center; color: rgb(16, 15, 15);">Ayesha Aziz</h1>
+        <h4
+          style="
+            padding: 5px 8px;
+            letter-spacing: 3px;
+            font-size: 20px;
+            text-align: center;
+            background-color: #835020;
+            margin: 40px 0 6px 0;
+            border-radius: 5px;
+          "
+        >
+          Web Developer
+        </h4>
+        
+        <div class="info">
+          <h5 class="head" style="margin-top: 50px; color: white;">PERSONAL INFORMATION</h5>
+
+          <div>
+            <h5>DOB</h5>
+            <p id="DOBT">26 / 02 /2006</p>
+          </div>
+          <div>
+            <h5>Currently Live</h5>
+            <p id="currentlyT">Karachi</p>
+          </div>
+          <div>
+            <h5>Gender</h5>
+            <p id="genderT">Female</p>
+          </div>
+          <div>
+            <h5>Address</h5>
+            <p id="addressT">Turk Market Baldia Town 3 Karachi</p>
+          </div>
+
+          <h3 class="head" style="margin-top: 40px; margin-bottom: 20px">
+            Contact Me
+          </h3>
+
+          <div style="margin-bottom: 10px">
+            <h5>Phone</h5>
+            <p id="contactT">+923131148362</p>
+          </div>
+
+          <div>
+            <h5>Email</h5>
+            <p>
+              <a id="emailT"
+                style="color: black; text-decoration: none"
+                href="mailto:moizaman3623@gmail.com"
+                >ayesha121@gmail.com</a
+              >
+            </p>
+          </div>
+
+          <!-- Links -->
+          <div class="icons" style="margin-top: 50px; margin-bottom: 20px;">
+            <div>
+              <a  style="text-decoration: none; color: rgb(68, 68, 207);"  href="#1"><i class="fa-brands fa-linkedin"></i></a>
+              <h3 id="icons_manage">LINKEDIN</h3>
+              <p id="LinkedInT" style="padding: 4px 0;"></p>
+            </div>
+
+            <div >
+              <a   href="#1" style="text-decoration: none; "  style="color: rgb(109, 104, 104) ">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <h3 id="icons_manage">GITHUB</h3>
+              <p id="githubT" style="padding: 4px 0;"></p>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+
+      <!-- image part -->
+      <div class="box2">
+        <div id="hide-img">
+          <img src="" alt="profile pic" id="imgTemplate"/>
+        </div>
 
         <!-- Education -->
-        <fieldset>
-          <legend>Education</legend>
-          <label for="education">Education</label>
-          <textarea
-            name="education"
-            id="education"
-            required
-            rows="4"
-          ></textarea>
-          <br />
-        </fieldset>
-        <!-- Experience -->
-        <fieldset>
-          <legend>Experience</legend>
-          <label for="experience">Experience</label>
-          <textarea
-            name="experience"
-            id="experience"
-            required
-            rows="4"
-          ></textarea>
-          <br />
-        </fieldset>
-        <!--  Skills -->
-        <fieldset>
-          <legend>Skills</legend>
-          <label for="skills">Skills</label>
-          <textarea name="skills" id="skills" required rows="4"></textarea>
-          <br />
-        </fieldset>
+        <div class="education">
+          <h3 style="letter-spacing: 5px; font-size: 1.6rem">EDUCATION</h3>
+          <!-- School -->
+          <div class="education_main">
+            <div class="edu-info">
+              <p id="round"></p>
+              <h2 style="color: #835020; padding-bottom: 10px">School</h2>
+              <h4 id="display-degree" style="color: #21359e;"></h4>
+              <h3 style="display: flex; font-weight: 700;" ><p id="display-graduation-start"></p> <pre>  -   </pre> <p id="display-graduation-end"></p></h3>
+              <p>Institute:<p id="display-institution"></p></p>
+            </div>
 
-        <button id="submit-btn" type="submit">Generate Resume Below</button>
-      </form>
+
+            <!-- College -->
+            <!-- <div class="education_main">
+              <div class="edu-info">
+                <p id="round"></p>
+                <h2 style="color: #835020; padding-bottom: 10px">College</h2>
+                <h4 id="display-degree2" style="color: #21359e;" ></h4>
+                <p>Institute:<p id="display-institution2"></p></p>
+                <h3 style="display: flex;"><p id="display-graduation-start2"></p> <pre>  -  </pre> <p id="display-graduation-end2"></p></h3>
+  
+                
+              </div> -->
+          </div>
+        </div>
+
+        <!-- Work Experience -->
+
+        <div class="experience">
+          <h3 style="letter-spacing: 5px; font-size: 1.3rem">
+            WORK EXPERIENCE
+          </h3>
+          <div class="experience_main">
+            <div id="exp-1">
+              <p id="round2"></p>
+              <h4 id="display-job-title">FRONTENED DEVELOPER</h4>
+              <h3 style="display: flex;"> <p id="display-company"></p> - Company</h3>
+              <h3 style="display: flex; font-weight: 700;">
+                <p id="display-start-date"></p> <pre>  -  </pre> <p id="display-end-date"></p>
+              </h3>
+              <p id="display-discription">hello</p>
+            </div>
+
+           
+          </div>
+        </div>
+
+        
+
+        <!-- Skills -->
+        <div class="skills-contain" >
+          <div class="" style="margin-top: 20px; margin-bottom: 20px;">
+              <h3 style="letter-spacing: 5px; font-size: 1.6rem">Skills</h3>
+          </div>
+
+          <div class="skills">
+              <ul id="skillT" style="font-size: 1.2rem; font-weight: 600;" >
+                  <li>Html</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>TypeScript</li>
+                  <li>Tailwind CSS</li>
+                  <li>React</li>
+              </ul>
+          </div>
+          <button id="skills-btn"></button>
+        </div>
+
     </div>
+  </div>
+  
+  <div class="cv-btn" >
+    <button id="print" onclick="printCV()"  >Print CV</button>
+    <button id="edit" >Edit Resume</button>
+    <button id="share-btn" >Shareable Link</button>
+  </div>
+  
+</div>
 
-    <div class="output"></div>
+</div>
 
-    <div class="container" id="resume-output">
-      <h1 id="output-head">Resume</h1>
 
-      <p id="resumeName"><strong style="font-weight: 800">Name:</strong></p>
-      <p id="resumeEmail"><strong style="font-weight: 800">Email:</strong></p>
-      <p id="resumePhone"><strong style="font-weight: 800">Phone:</strong></p>
+<footer>
+  <h3 style="color: white;">Made by GIAIC student  <span style="color: red;">&#9829;</span> Ayesha</h3>
+</footer>
+  
 
-      <h3>Education:</h3>
-      <p id="resumeEducation"></p>
 
-      <h3>Experience:</h3>
-      <p id="resumeExperience"></p>
-
-      <h3>Skills:</h3>
-      <p id="resumeSkils"></p>
-    </div>
-
-    <button id="edit-btn" class="output">Edit Resume</button>
-
-    <div class="foot">
-      <button id="print-btn" class="click">Download pdf</button>
-      <button id="share-btn" class="click">Shareable Link</button>
-    </div>
-
-    <footer>Made by GIAIC Student &#9829; AYESHA</footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.js"></script>
-    <script src="app.js" defer></script>
+    <script src="app.js"></script>
   </body>
 </html>
