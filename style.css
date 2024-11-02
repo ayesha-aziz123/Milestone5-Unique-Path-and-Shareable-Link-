@@ -287,7 +287,7 @@ h3 {
 }
 
 #cv-template {
-  /* display: none; */
+  display: none;
 }
 .cv-btn {
   display: flex;
