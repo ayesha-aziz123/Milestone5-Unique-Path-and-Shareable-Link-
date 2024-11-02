@@ -114,7 +114,7 @@ button {
   margin: 10px 0 0 0;
 }
 .box1 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .info h5 {
@@ -256,10 +256,10 @@ h3 {
   margin-bottom: 20px;
 }
 /* heading */
-.head {
+.info .head {
   background-color: #203183;
   width: 80%;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: rgb(255, 255, 255);
   border-radius: 6px;
   text-align: center;
@@ -328,7 +328,7 @@ footer h3 {
   width: 80%;
 }
 #cv-template {
-  display: none;
+  /* display: none; */
 }
 .cv-btn {
   display: flex;
@@ -433,7 +433,7 @@ footer h3 {
   .info .head {
     background-color: #203183;
     width: 90%;
-    font-size: 1.04rem;
+    font-size: 1rem;
     color: rgb(255, 255, 255);
     border-radius: 6px;
     text-align: center;
