@@ -5,8 +5,6 @@ let editbtn = document.getElementById("edit") as HTMLElement;
 let cvTemplate = document.getElementById("cv-template") as HTMLFormElement;
 let sharebtn = document.getElementById("share-btn") as HTMLElement;
 
-
-
 skillBtn.innerHTML = "Hide Skills";
 
 skillBtn?.addEventListener("click", () => {
@@ -49,6 +47,8 @@ cvform?.addEventListener("submit", (e: Event) => {
   const startDate = (document.getElementById("start-date") as HTMLInputElement).value;
   const endDate = (document.getElementById("end-date") as HTMLInputElement).value;
   const jobDescription = (document.getElementById("job-description") as HTMLInputElement).value;
+  const profession = (document.getElementById("professionField") as HTMLInputElement).value;
+  const about = (document.getElementById("aboutField") as HTMLInputElement).value;
 
 
   // links
@@ -63,6 +63,7 @@ cvform?.addEventListener("submit", (e: Event) => {
   (document.getElementById("contactT") as HTMLElement).textContent = phone;
   (document.getElementById("emailT") as HTMLElement).textContent = email;
   (document.getElementById("addressT") as HTMLElement).textContent = address;
+  (document.getElementById("aboutT") as HTMLElement).textContent = about;
 
   // School
   (document.getElementById("display-degree") as HTMLElement).textContent = degree;
@@ -87,6 +88,7 @@ cvform?.addEventListener("submit", (e: Event) => {
   (document.getElementById("display-start-date") as HTMLElement).textContent = startDate;
   (document.getElementById("display-end-date") as HTMLElement).textContent = endDate;
   (document.getElementById("display-discription") as HTMLElement).textContent = jobDescription;
+  (document.getElementById("professionT") as HTMLElement).textContent = profession;
 
 
   // ******* Skills *********
@@ -120,7 +122,6 @@ cvform?.addEventListener("submit", (e: Event) => {
 
   (document.getElementById("cv-form") as HTMLElement).style.display = "none";
   (document.getElementById("cv-template") as HTMLElement).style.display = "block";
-
 
   let names = document.getElementById("nameField") as HTMLInputElement;
 

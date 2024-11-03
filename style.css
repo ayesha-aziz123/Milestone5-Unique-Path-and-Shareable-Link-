@@ -7,16 +7,9 @@
   font-family: poppins;
 }
 .container {
+  margin: 20px 30px;
   width: 100%;
 }
-.wrapper {
-  padding: 60px 30px;
-  background-color: #ca9025;
-}
-body {
-  background-color: #e7e5e0;
-}
-
 .box1-generate {
   display: flex;
   justify-content: space-evenly;
@@ -38,10 +31,9 @@ label {
 }
 
 .container1 h3 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   letter-spacing: 2px;
   font-weight: 700;
-  color: #555658;
 }
 
 .col2 {
@@ -76,16 +68,17 @@ button {
   font-size: 1.2rem;
 }
 
-/* CV */
+/*//////////////////////////////////////////////     CV          ///////////////////////////////// */
 
 .wrapper {
-  border-radius: 2px;
+  margin: 7vw 0;
+  border-radius: 9px;
 }
 .container {
   flex-wrap: wrap;
-  background-color: #413e39;
+  background-color: #252020;
   width: 70%;
-  color: rgb(255, 255, 255);
+  color: rgb(241, 238, 238);
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
@@ -93,47 +86,56 @@ button {
   padding: 20px;
   border-radius: 8px;
   margin: auto;
-  box-shadow: 20px 40px 40px 3px #2b2a2a;
+  box-shadow: 20px 40px 40px 3px #363535;
 }
 .box1 {
-  width: 45%;
+  width: 40%;
   border-radius: 7px;
-  background-color: #6e7074;
+  background-color: #413f3f;
   padding: 2vw 3vw;
 }
 .box2 {
-  width: 50%;
+  width: 55%;
 }
 .box2 img {
-  width: 90%;
-  height: 460px;
+  width: 80%;
+  height: auto;
   border-radius: 4px;
   object-fit: cover;
+  margin: auto;
+}
+#professionT {
+  padding: 3px 8px;
+  letter-spacing: 3px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #835020;
+  margin: 40px 0 6px 0;
+  border-radius: 5px;
 }
 .info div {
   margin: 10px 0 0 0;
 }
 .box1 h1 {
-  font-size: 2rem;
+  font-size: 2.3rem;
 }
 
 .info h5 {
-  color: #302f2f;
-  font-size: 1.3rem;
+  color: #bd781f;
+  font-size: 1.1rem;
 }
 .info p {
   font-size: 1rem;
-  color: #fffefe;
-  font-weight: 600;
 }
-#para {
-  color: #6e6d6d;
+.para {
+  color: #9f9c9c;
   font-size: 0.87rem;
   padding: 10px 0 0 0px;
   line-height: 19px;
 }
 h3 {
-  color: rgb(255, 255, 255);
+  color: rgb(255, 250, 250);
+  font-weight: 800;
 }
 
 .about {
@@ -151,7 +153,7 @@ h3 {
 }
 .education h4,
 .experience h4 {
-  color: #203183;
+  color: #2014a5;
   font-size: 1.3rem;
 }
 .box1 .sign {
@@ -161,28 +163,13 @@ h3 {
   font-weight: bolder;
 }
 
-.icons {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 15px;
-}
-#icons_manage {
-  display: inline-block;
-  padding-right: 20px;
-}
-.icons h3 {
+.icons p {
   font-size: 0.78rem;
-  margin-left: 30px;
-}
-.icons i {
-  font-size: 1.4rem;
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(26, 61, 141);
-  padding: 5px;
 }
 
+#nameT {
+  font-size: 2rem;
+}
 .experience {
   margin-top: 70px;
 }
@@ -207,7 +194,7 @@ h3 {
   border-radius: 50%;
   height: 7px;
   width: 7px;
-  background-color: #3042cb;
+  background-color: #1a34b5;
   margin-left: -21px;
 }
 
@@ -217,7 +204,7 @@ h3 {
   border-radius: 50%;
   height: 7px;
   width: 7px;
-  background-color: #3042cb;
+  background-color: #1a34b5;
   margin-left: -28px;
 }
 .experience .experience_main {
@@ -232,15 +219,18 @@ h3 {
 }
 /* skills */
 .skills-contain {
-  margin-top: 80px;
+  margin-top: 60px;
+}
+.skills {
+  margin-left: 20px;
 }
 
 #skills-btn {
-  margin-top: 40px;
-  padding: 5px 20px 5px 20px;
+  margin-top: 30px;
+  padding: 12px 10px;
   width: 40%;
   background-color: rgb(219, 94, 36);
-  color: rgb(0, 0, 0);
+  color: rgb(251, 251, 251);
   cursor: pointer;
   font-weight: 600;
   border: none;
@@ -253,13 +243,15 @@ h3 {
   background-color: #66686d;
 }
 #skill-heading {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
+
 /* heading */
-.info .head {
-  background-color: #203183;
-  width: 80%;
-  font-size: 1rem;
+.head {
+  background-color: #3c3c3d;
+  box-shadow: 5px 10px 20px 0 rgb(97, 98, 99);
+  width: 90%;
+  font-size: 1.1rem;
   color: rgb(255, 255, 255);
   border-radius: 6px;
   text-align: center;
@@ -285,117 +277,19 @@ h3 {
   display: none;
   object-fit: cover;
 }
-
-#cv-template {
-  display: none;
-}
-.cv-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-.cv-btn button {
-  background-color: rgb(36, 92, 181);
-}
-.cv-btn #print,
-#edit,
-#share-btn {
-  padding: 8px 45px;
-  font-size: 1.1rem;
-}
-
-footer {
-  width: 100%;
-  height: 80px;
-  background-color: rgb(43, 42, 42);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 1rem;
-}
-footer h3 {
-  letter-spacing: 3px;
-}
-.container1 #heading {
-  font-size: 20px;
-  background-color: rgb(44, 48, 46);
-  color: white;
-  padding: 8px 4px;
-  border-radius: 5px;
-  text-align: center;
-  width: 80%;
-}
-#cv-template {
-  /* display: none; */
-}
-.cv-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-  gap: 20px;
-}
-.cv-btn button {
-  background-color: rgb(36, 92, 181);
-}
-.cv-btn #print,
-#edit,
-#share-btn {
-  padding: 10px 45px;
-  font-size: 1.1rem;
-  transition: 0.3s ease;
-}
-#share-btn:hover {
-  background-color: #3554ed;
-}
-#print:hover {
-  background-color: #3554ed;
-}
-#edit:hover {
-  background-color: #3554ed;
-}
-#profession {
-  padding: 3px 5px;
-  letter-spacing: 3px;
-  font-size: 15px;
-  text-align: center;
-  color: #fcfcfe;
-  background-color: #835020;
-  margin: 13px 0 6px 0;
-  width: 100%;
-  border-radius: 5px;
-}
-
-footer {
-  width: 100%;
-  height: 80px;
-  background-color: rgb(43, 42, 42);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 1rem;
-}
-footer h3 {
-  letter-spacing: 3px;
-}
-.container1 #heading {
-  font-size: 20px;
-  background-color: rgb(44, 48, 46);
-  color: white;
-  padding: 8px 4px;
-  border-radius: 5px;
-  text-align: center;
-  width: 80%;
+.box2 h3 {
+  font-size: 1.5rem;
+  box-shadow: 5px 5px 20px 3px rgb(77, 78, 78);
+  padding: 5px 10px;
+  border-radius: 6px;
 }
 
 @media (max-width: 760px) {
   .container {
-    width: 100%;
+    width: 80%;
     margin: auto;
     flex-wrap: wrap;
+    width: 70%;
     flex-direction: column;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -414,6 +308,7 @@ footer h3 {
   .box2 {
     width: 100%;
   }
+
   #hide-img {
     display: none;
   }
@@ -428,43 +323,23 @@ footer h3 {
 @media (max-width: 470px) {
   .container {
     border-radius: 6px;
-    width: 100%;
+    width: 85%;
   }
-  .info .head {
-    background-color: #203183;
-    width: 90%;
-    font-size: 1rem;
-    color: rgb(255, 255, 255);
-    border-radius: 6px;
-    text-align: center;
-    margin-top: 20px;
-    padding: 3px 3px;
+  .para {
+    color: #9f9c9c;
+    font-size: 0.68rem;
+    padding: 10px 0 0 0px;
+    line-height: 19px;
   }
-  .h {
-    font-size: 3px;
-  }
-  #profession {
-    padding: 3px 4px;
-    letter-spacing: 3px;
-    font-size: 13px;
-    text-align: center;
-    color: #fcfcfe;
-    background-color: #835020;
-    margin: 15px 0 6px 0;
-    width: 100%;
-    border-radius: 5px;
+
+  #nameT {
+    font-size: 1.5rem;
   }
 
   #skills-btn {
     font-size: 1rem;
     padding: 6px 25px 6px 25px;
     width: 80%;
-  }
-  .skills {
-    padding: 0 10px;
-  }
-  .skills-contain {
-    margin-top: 40px;
   }
   .head {
     width: 100%;
@@ -485,11 +360,9 @@ footer h3 {
     font-size: 1.8rem;
   }
   .cv-btn #print,
-  #edit,
-  #share-btn {
-    width: 60%;
-    padding: 9px 16px;
-    font-size: 0.87rem;
+  #edit {
+    padding: 13px 30px;
+    font-size: 0.9rem;
   }
   .cv-btn {
     display: flex;
@@ -497,10 +370,13 @@ footer h3 {
     align-items: center;
     flex-direction: column;
     margin-top: 30px;
-    gap: 0;
+    gap: 30px;
   }
-  footer {
-    font-size: 0.89rem;
+  .box2 h3 {
+    font-size: 1.1rem;
+  }
+  .skills {
+    margin-left: 10px;
   }
 }
 
@@ -517,4 +393,46 @@ footer h3 {
   .col2 {
     width: 90%;
   }
+}
+#cv-template {
+  display: none;
+}
+.cv-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 30px;
+}
+.cv-btn button {
+  background-color: rgb(36, 92, 181);
+}
+.cv-btn #print,
+#edit {
+  padding: 13px 45px;
+  font-size: 1.1rem;
+}
+
+footer {
+  margin-top: 20px;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(43, 42, 42);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+}
+footer h3 {
+  letter-spacing: 3px;
+}
+.container1 #heading {
+  font-size: 20px;
+  background-color: rgb(44, 48, 46);
+  color: white;
+  padding: 8px 4px;
+  border-radius: 5px;
+  text-align: center;
+  width: 80%;
 }

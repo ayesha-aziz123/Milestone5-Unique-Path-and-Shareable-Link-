@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Milestone 5 Resume</title>
+    <title>Editable Resume</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <div class="container1" id="cv-form">
-      <h1 style="text-align: center; font-size: 2.5rem; color: rgb(9, 8, 8); background-color: rgb(172, 73, 73); margin-bottom: 40px; letter-spacing: 2px; font-family: cursive;">  Resume </h1>
+      <h1 style="text-align: center; color: white; padding: 10px 0; text-align: center; background-color: rgb(56, 47, 47); margin-bottom: 40px; letter-spacing: 2px; ">Milestone5 Resume </h1>
       <div class="box1-generate">
         <!-- first col -->
         <div class="col1">
@@ -18,7 +18,7 @@
             <div class="form-group">
               <label for="nameField"> Name</label>
                <input
-               required
+               
               type="text"
               id="nameField"
               class="form-control"
@@ -28,7 +28,7 @@
            <div class="form-group">
              <label for="emailField"> Email</label>
             <input
-            required
+            
               type="email"
               id="emailField"
               class="form-control"
@@ -40,19 +40,28 @@
        <div class="form-group">
        <label for="contactField"> Phone</label>
             <input
-            required
+            
               type="number"
               id="contactField"
               class="form-control"
               placeholder="Enter Phone"
             />
         </div>
-        
+        <div class="form-group">
+          <label for="professionField">Profession</label>
+               <input
+               
+                 type="text"
+                 id="professionField"
+                 class="form-control"
+                 placeholder="Enter Profession"
+               />
+           </div>
 
         <div class="form-group">
           <label for="currently_live">Currently Live</label>
          <input
-         required
+         
            type="text"
            id="currently_live"
            class="form-control"
@@ -94,6 +103,16 @@
               placeholder="Enter here"
             ></textarea>
         </div>
+        <div class="form-group">
+          <label for="aboutField">About Yourself </label>
+           <textarea
+             rows="2"
+             type="text"
+             id="aboutField"
+             class="form-control"
+             placeholder="Enter here"
+           ></textarea>
+       </div>
           
           
           
@@ -114,7 +133,7 @@
                 <!-- Skills Section -->
                 <div class="form-group ">
                   <label for="skills">Skills</label>
-                  <textarea required rows="3" placeholder="comma (seperated)" id="skills" class="form-control sfield "></textarea>
+                  <textarea  rows="3" placeholder="comma (seperated)" id="skills" class="form-control sfield "></textarea>
                 </div>
             </div>
            
@@ -124,47 +143,38 @@
         <h3 id="heading">Professional Information</h3>
 
         <!-- Education section -->
-       <div class="form-group" id="education"  style="margin-top: 20px;">
-        <h3>Education</h3>
+       <div class="form-group" id="education"  style="margin-top: 10px;">
+        <h3 style="color: black;">Education</h3>
 
-        <!-- School -->
-        <label>School:</label>
-        <input required type="text" id="degree" placeholder="School Name" >
-        <label>Institution:</label>
-        <input required type="text" id="institution" placeholder="Institution" >
+      
+        <label>Degree:</label>
+        <input  type="text" id="degree" placeholder="enter degree" >
+        <label >Institution:</label>
+        <input  type="text" id="institution" placeholder="Institution" >
         <label>Start Year:</label>
-        <input required type="number" id="graduation-date-start">
+        <input  type="number" id="graduation-date-start">
         <label>End Year:</label>
-        <input required type="number" id="graduation-date-end" >
+        <input  type="number" id="graduation-date-end" >
 
 
-        <!-- College -->
-        <!-- <label>College:</label>
-        <input type="text" id="degree2" placeholder="College Name" >
-        <label>Institution:</label>
-        <input type="text" id="institution2" placeholder="Institution2" >
-        <label>Start Year:</label>
-        <input type="number" id="college-start-date">
-        <label>End Year:</label>
-        <input type="number" id="college-end-date" > -->
       </div>
 
           
           <!-- Work Experience Section -->
       <div class="form-group" id="work-experience" style="margin-top: 30px;">
-        <h3>Work Experience</h3>
+        <h3 style="color: black;">Work Experience</h3>
         <label>Job Title:</label>
         <input type="text" id="job-title" placeholder="Job Title" >
 
         <label>Company:</label>
-        <input required type="text" id="company" placeholder="Company" >
+        <input  type="text" id="company" placeholder="Company" >
 
         <label>Description:</label>
-        <input required type="text" id="job-description" placeholder="Job description" ></input>
+        <input  type="text" id="job-description" placeholder="Job description" ></input>
         <label>Start Year:</label>
-        <input required type="number" id="start-date" >
+        <input  type="number" id="start-date" >
         <label>End Year:</label>
-        <input required type="number" id="end-date" >      
+        <input  type="number" id="end-date" >      
        </div>
      </div>
         
@@ -193,14 +203,13 @@
             src=""
             alt="profile pic"
             width="100%"
-            height="50%"
             style="object-fit: cover"
             id="imgTemplate-hide"
             
           />
         </div>
-        <h1 id="nameT" style="letter-spacing: 5px; margin-bottom: 20px; text-align: center; color: rgb(255, 254, 254);">Ayesha Aziz</h1>
-        <h4 id="profession">
+        <h1 id="nameT" style="letter-spacing: 5px; margin-bottom: 20px; text-align: center; color: rgb(255, 255, 255);">Ayesha Aziz</h1>
+        <h4 id="professionT">
           Web Developer
         </h4>
         
@@ -234,7 +243,7 @@
             <h5>Email</h5>
             <p>
               <a id="emailT"
-                style="color: white; text-decoration: none"
+                style="color: rgb(255, 255, 255); text-decoration: none"
                 href="mailto:moizaman3623@gmail.com"
                 >ayesha121@gmail.com</a
               >
@@ -242,75 +251,61 @@
           </div>
 
           <!-- Links -->
-          <div class="icons" style="margin-top: 50px; margin-bottom: 20px;">
-            <div>
-              <a  style="text-decoration: none; color: rgb(68, 68, 207);"  href="#1"><i class="fa-brands fa-linkedin"></i></a>
-              <h3 id="icons_manage">LINKEDIN</h3>
-              <p id="LinkedInT" style="padding: 4px 0;"></p>
+          <div class="icons" style="margin-top: 50px; overflow: hidden; margin-bottom: 20px; " >
+            <div >
+              <p style="font-size: 15px;"> <span style="font-size: 1.2rem;">LinkedIn :</span> <a style=" color: #b2aeae;" id="LinkedInT" href="#1" target="_blank"></a></p>
             </div>
 
             <div >
-              <a   href="#1" style="text-decoration: none; "  style="color: rgb(109, 104, 104) ">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <h3 id="icons_manage">GITHUB</h3>
-              <p id="githubT" style="padding: 4px 0;"></p>
+              <p style="font-size: 15px;"> <span style="font-size: 1.2rem;">Github :</span> <a style=" color: #b2aeae;" id="githubT" href="#1" target="_blank"></a></p>
             </div>
           </div>
-
           
+        </div>
+        <div class="about" style="margin-top: 80px;">
+          <h2 class="head"  style="margin-bottom: 10px; letter-spacing: 2px; font-size: 1.7rem;">About me</h2>
+          <p id="aboutT" class="para">
+           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit quia doloremque tempore ut culpa sed sequi impedit veniam deserunt a!
+
+          </p>
         </div>
       </div>
 
       <!-- image part -->
       <div class="box2">
         <div id="hide-img">
-          <img src="" alt="profile pic" id="imgTemplate"/>
+          <img src="" alt="profile pic" id="imgTemplate" />
         </div>
 
         <!-- Education -->
         <div class="education">
-          <h3 style="letter-spacing: 5px; font-size: 1.6rem">EDUCATION</h3>
+          <h3 style="letter-spacing: 5px;color: white;">EDUCATION</h3>
           <!-- School -->
           <div class="education_main">
             <div class="edu-info">
               <p id="round"></p>
-              <h2 style="color: #a36225; padding-bottom: 10px">School</h2>
-              <h4 id="display-degree" style="color: #21359e;"></h4>
-              <h3 style="display: flex; font-weight: 700;" ><p id="display-graduation-start"></p> <pre>  -   </pre> <p id="display-graduation-end"></p></h3>
-              <p>Institute:<p id="display-institution"></p></p>
+              <h4 id="display-degree" style="color: #ae6a2b;"></h4>
+              <span style="display: flex; font-weight: 700;" ><p id="display-graduation-start"></p> <pre>  to  </pre> <p id="display-graduation-end"></p></span>
+              <p style="margin-top: 20px;font-size: 1.1rem;">Institute:<p id="display-institution" style="color: #c4c4ce; font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, fuga.</p></p>
             </div>
-
-
-            <!-- College -->
-            <!-- <div class="education_main">
-              <div class="edu-info">
-                <p id="round"></p>
-                <h2 style="color: #835020; padding-bottom: 10px">College</h2>
-                <h4 id="display-degree2" style="color: #21359e;" ></h4>
-                <p>Institute:<p id="display-institution2"></p></p>
-                <h3 style="display: flex;"><p id="display-graduation-start2"></p> <pre>  -  </pre> <p id="display-graduation-end2"></p></h3>
-  
-                
-              </div> -->
           </div>
         </div>
 
         <!-- Work Experience -->
 
         <div class="experience">
-          <h3 style="letter-spacing: 5px; font-size: 1.3rem">
+          <h3 style="letter-spacing: 5px;  color: white;">
             WORK EXPERIENCE
           </h3>
           <div class="experience_main">
             <div id="exp-1">
               <p id="round2"></p>
-              <h4 id="display-job-title" style="color: #a36225; padding-bottom: 10px">FRONTENED DEVELOPER</h4>
-              <h3 style="display: flex;"> <p id="display-company"></p> - Company</h3>
-              <h3 style="display: flex; font-weight: 700;">
-                <p id="display-start-date"></p> <pre>  -  </pre> <p id="display-end-date"></p>
-              </h3>
-              <p id="display-discription"></p>
+              <h4 id="display-job-title" style="color: #ae6a2b;">FRONTENED DEVELOPER</h4>
+              <span style="display: flex;"> <p id="display-company"></p> - Company</span>
+              <span style="display: flex; font-weight: 700;">
+                <p id="display-start-date"></p> <pre>  to  </pre> <p id="display-end-date"></p>
+              </span>
+              <p id="display-discription" style="color: #c4c4ce; font-size: 15px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, ad!</p>
             </div>
 
            
@@ -321,8 +316,8 @@
 
         <!-- Skills -->
         <div class="skills-contain" >
-          <div class="" style="margin-top: 10px; margin-bottom: 20px;">
-              <h3 style="letter-spacing: 5px; font-size: 1.6rem">Skills</h3>
+          <div class="" style="margin-top: 20px; margin-bottom: 20px;">
+              <h3 style="letter-spacing: 5px; ">Skills</h3>
           </div>
 
           <div class="skills">

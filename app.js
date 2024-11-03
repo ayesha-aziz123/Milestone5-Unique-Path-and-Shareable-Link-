@@ -40,6 +40,8 @@ cvform?.addEventListener("submit", (e) => {
     const startDate = document.getElementById("start-date").value;
     const endDate = document.getElementById("end-date").value;
     const jobDescription = document.getElementById("job-description").value;
+    const profession = document.getElementById("professionField").value;
+    const about = document.getElementById("aboutField").value;
     // links
     let Github = document.getElementById("GithubField").value;
     let linkedin = document.getElementById("linkedinField").value;
@@ -49,6 +51,7 @@ cvform?.addEventListener("submit", (e) => {
     document.getElementById("contactT").textContent = phone;
     document.getElementById("emailT").textContent = email;
     document.getElementById("addressT").textContent = address;
+    document.getElementById("aboutT").textContent = about;
     // School
     document.getElementById("display-degree").textContent = degree;
     document.getElementById("display-institution").textContent = institution;
@@ -66,6 +69,7 @@ cvform?.addEventListener("submit", (e) => {
     document.getElementById("display-start-date").textContent = startDate;
     document.getElementById("display-end-date").textContent = endDate;
     document.getElementById("display-discription").textContent = jobDescription;
+    document.getElementById("professionT").textContent = profession;
     // ******* Skills *********
     let skills = document.getElementsByClassName("sfield");
     let skillsStr = "";
@@ -99,7 +103,6 @@ cvform?.addEventListener("submit", (e) => {
             const shareableLink = `https://milestone5-unique-path-and-shareable-link-ayesha.vercel.app/?username.value/${names.value.replace(/\s+/g, '_')}`;
             await navigator.clipboard.writeText(shareableLink);
             alert("Shareable linkcopied to Clipboard!");
-            console.log("hi");
         }
         catch (err) {
             alert("Failed to copy link clipboard . please try again!");
