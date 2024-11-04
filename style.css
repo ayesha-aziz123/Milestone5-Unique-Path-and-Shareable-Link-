@@ -98,10 +98,13 @@ button {
   width: 55%;
 }
 .box2 img {
-  width: 80%;
+  width: 70%;
   height: auto;
   border-radius: 4px;
   object-fit: cover;
+  margin: auto;
+}
+.box2 #hide-img {
   margin: auto;
 }
 #professionT {
@@ -121,11 +124,14 @@ button {
 }
 
 .info h5 {
-  color: #bd781f;
-  font-size: 1.1rem;
-}
-.info p {
+  color: #aba1a1;
   font-size: 1rem;
+  font-weight: 600;
+}
+
+.info p {
+  color: #ffffff;
+  font-size: 0.78rem;
 }
 .para {
   color: #9f9c9c;
@@ -153,7 +159,7 @@ h3 {
 }
 .education h4,
 .experience h4 {
-  color: #2014a5;
+  color: #c0721e;
   font-size: 1.3rem;
 }
 .box1 .sign {
@@ -194,17 +200,20 @@ h3 {
   border-radius: 50%;
   height: 7px;
   width: 7px;
-  background-color: #1a34b5;
+  background-color: #c5602a;
   margin-left: -21px;
 }
-
+.icons span {
+  color: #ffffff;
+  font-size: 1rem;
+}
 #round2 {
-  border: 1px solid #21359e;
+  border: 1px solid #9e4721;
   padding: 6px;
   border-radius: 50%;
   height: 7px;
   width: 7px;
-  background-color: #1a34b5;
+  background-color: #c5602a;
   margin-left: -28px;
 }
 .experience .experience_main {
@@ -227,7 +236,7 @@ h3 {
 
 #skills-btn {
   margin-top: 30px;
-  padding: 12px 10px;
+  padding: 5px 9px;
   width: 40%;
   background-color: rgb(219, 94, 36);
   color: rgb(251, 251, 251);
@@ -235,7 +244,7 @@ h3 {
   font-weight: 600;
   border: none;
   border-radius: 7px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   letter-spacing: 2px;
   transition: 0.3s ease-in;
 }
@@ -250,13 +259,16 @@ h3 {
 .head {
   background-color: #3c3c3d;
   box-shadow: 5px 10px 20px 0 rgb(97, 98, 99);
-  width: 90%;
+  width: 100%;
   font-size: 1.1rem;
   color: rgb(255, 255, 255);
   border-radius: 6px;
   text-align: center;
   margin-top: 20px;
   padding: 4px 6px;
+}
+#nameT {
+  font-size: 2.2rem;
 }
 
 .skills-setup {
@@ -283,13 +295,15 @@ h3 {
   padding: 5px 10px;
   border-radius: 6px;
 }
+.skills ul li {
+  font-size: 1rem;
+}
 
 @media (max-width: 760px) {
   .container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     flex-wrap: wrap;
-    width: 70%;
     flex-direction: column;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -318,12 +332,20 @@ h3 {
     height: 100%;
     margin-bottom: 30px;
   }
+  #hide-img2 {
+    width: 80%;
+    margin: auto;
+  }
 }
 
 @media (max-width: 470px) {
   .container {
     border-radius: 6px;
-    width: 85%;
+    width: 95%;
+  }
+  #hide-img2 {
+    width: 80%;
+    margin: auto;
   }
   .para {
     color: #9f9c9c;
@@ -334,6 +356,9 @@ h3 {
 
   #nameT {
     font-size: 1.5rem;
+  }
+  footer h3 {
+    font-size: 0.8rem;
   }
 
   #skills-btn {
@@ -347,6 +372,7 @@ h3 {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 10px;
+    font-size: rem;
   }
   .box1 .sign {
     height: 190px;
@@ -359,24 +385,23 @@ h3 {
   .box1 h1 {
     font-size: 1.8rem;
   }
-  .cv-btn #print,
+  .cv-btn,
   #edit {
-    padding: 13px 30px;
-    font-size: 0.9rem;
+    padding: 7px 30px;
+    font-size: 0.78rem;
   }
-  .cv-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 30px;
-    gap: 30px;
+  #print {
+    padding: 7px 42px;
   }
+
   .box2 h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .skills {
     margin-left: 10px;
+  }
+  .skills ul li {
+    font-size: 0.7rem;
   }
 }
 
@@ -394,6 +419,7 @@ h3 {
     width: 90%;
   }
 }
+
 #cv-template {
   display: none;
 }
@@ -402,15 +428,14 @@ h3 {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-  gap: 30px;
+  flex-wrap: wrap;
 }
 .cv-btn button {
   background-color: rgb(36, 92, 181);
 }
 .cv-btn #print,
 #edit {
-  padding: 13px 45px;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 footer {

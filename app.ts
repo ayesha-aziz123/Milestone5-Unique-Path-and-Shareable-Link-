@@ -35,12 +35,6 @@ cvform?.addEventListener("submit", (e: Event) => {
   const graduationDateStart = (document.getElementById("graduation-date-start") as HTMLInputElement).value;
   const graduationDateEnd = (document.getElementById("graduation-date-end") as HTMLInputElement).value;
 
-  // College
-  // const degree2 = (document.getElementById("degree2") as HTMLInputElement).value;
-  // const institution2 = (document.getElementById("institution2") as HTMLInputElement).value;
-  // const collegeDateStart = (document.getElementById("college-end-date") as HTMLInputElement).value;
-  // const collegeDateEnd = (document.getElementById("college-start-date") as HTMLInputElement).value;
-
 
   const jobTitle = (document.getElementById("job-title") as HTMLInputElement).value;
   const company = (document.getElementById("company") as HTMLInputElement).value;
@@ -70,13 +64,6 @@ cvform?.addEventListener("submit", (e: Event) => {
   (document.getElementById("display-institution") as HTMLElement).textContent = institution;
   (document.getElementById("display-graduation-start") as HTMLElement).textContent = graduationDateStart;
   (document.getElementById("display-graduation-end") as HTMLElement).textContent = graduationDateEnd;
-
-  // College
-  // (document.getElementById("display-degree2") as HTMLElement).textContent = degree2;
-  // (document.getElementById("display-institution2") as HTMLElement).textContent = institution2;
-  // (document.getElementById("display-graduation-start2") as HTMLElement).textContent = collegeDateStart;
-  // (document.getElementById("display-graduation-end2") as HTMLElement).textContent = collegeDateEnd;
-
 
 
 
