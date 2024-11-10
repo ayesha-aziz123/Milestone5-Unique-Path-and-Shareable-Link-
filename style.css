@@ -195,6 +195,16 @@ footer {
   background-size: cover;
 }
 
+.remove-btn{
+  background-color: #cd2a11;
+  padding: 3px 8px;
+}
+.add{
+  background-color: #1121cd;
+  padding: 3px 12px;
+
+}
+
 @media (max-width: 1970px) {
   .hero {
     padding: 150px 11% 60px;

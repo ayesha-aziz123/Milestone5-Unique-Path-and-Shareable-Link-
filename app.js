@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+// Object.defineProperty(exports, "__esModule", { value: true });
 // import jQuery from "jquery";
 // require("print-this");
 let cvform = document.querySelector("#cv-form");
@@ -113,6 +113,8 @@ cvform?.addEventListener("submit", (e) => {
         }
     });
 });
+
+
 editbtn?.addEventListener("click", () => {
     cvform.style.display = "block";
     cvTemplate.style.display = "none";
