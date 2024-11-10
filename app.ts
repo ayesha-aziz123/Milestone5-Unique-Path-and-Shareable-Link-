@@ -40,14 +40,14 @@ cvform?.addEventListener("submit", (e: Event) => {
   const graduationDateStart = (document.getElementById("graduation-date-start") as HTMLInputElement).value;
   const graduationDateEnd = (document.getElementById("graduation-date-end") as HTMLInputElement).value;
 
-
+// Experience
   const jobTitle = (document.getElementById("job-title") as HTMLInputElement).value;
   const company = (document.getElementById("company") as HTMLInputElement).value;
   const startDate = (document.getElementById("start-date") as HTMLInputElement).value;
   const endDate = (document.getElementById("end-date") as HTMLInputElement).value;
   const jobDescription = (document.getElementById("job-description") as HTMLInputElement).value;
 
-
+// Experience
   const jobTitle2 = (document.getElementById("job-title2") as HTMLInputElement).value;
   const company2 = (document.getElementById("company2") as HTMLInputElement).value;
   const startDate2 = (document.getElementById("start-date2") as HTMLInputElement).value;
@@ -87,11 +87,11 @@ cvform?.addEventListener("submit", (e: Event) => {
   (document.getElementById("display-end-date") as HTMLElement).textContent = endDate;
   (document.getElementById("display-discription") as HTMLElement).textContent = jobDescription;
 
-  (document.getElementById("display-job-title2") as HTMLElement).textContent = jobTitle;
-  (document.getElementById("display-company2") as HTMLElement).textContent = company;
-  (document.getElementById("display-start-date2") as HTMLElement).textContent = startDate;
-  (document.getElementById("display-end-date2") as HTMLElement).textContent = endDate;
-  (document.getElementById("display-discription2") as HTMLElement).textContent = jobDescription;
+  (document.getElementById("display-job-title2") as HTMLElement).textContent = jobTitle2;
+  (document.getElementById("display-company2") as HTMLElement).textContent = company2;
+  (document.getElementById("display-start-date2") as HTMLElement).textContent = startDate2;
+  (document.getElementById("display-end-date2") as HTMLElement).textContent = endDate2;
+  (document.getElementById("display-discription2") as HTMLElement).textContent = jobDescription2;
 
 
 

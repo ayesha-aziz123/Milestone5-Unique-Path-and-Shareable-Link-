@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+// Object.defineProperty(exports, "__esModule", { value: true });
 let skillBtn = document.querySelector("#skills-btn");
 let skillList = document.querySelector(".skills");
 skillBtn.innerHTML = "Hide Skills";

@@ -149,15 +149,16 @@ footer {
 }
 .footer-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 6rem 8rem;
   align-items: center;
 }
 .footer-container .box h3 {
   margin-bottom: 1.2rem;
 }
+
 .footer-container .box p {
-  margin-bottom: 7px;
+  margin-bottom: 40px;
   color: rgb(242, 242, 242);
   cursor: pointer;
   transition: 0.2s ease;
@@ -177,9 +178,10 @@ footer {
   transition: 0.3s ease;
 }
 .socials i:hover {
-  color: #1170cd;
+  color: #cd6f11;
   transform: translateY(-8px);
 }
+
 .copyright {
   text-align: center;
   padding-bottom: 1rem;
@@ -382,7 +384,12 @@ footer {
   }
   nav a {
     color: rgb(0, 0, 0);
-    /* font-size: 1.1rem; */
     position: relative;
+  }
+  .footer-container .box p {
+    margin-bottom: 10px;
+    color: rgb(242, 242, 242);
+    cursor: pointer;
+    transition: 0.2s ease;
   }
 }

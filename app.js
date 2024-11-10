@@ -1,5 +1,5 @@
 "use strict";
-// Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", { value: true });
 // import jQuery from "jquery";
 // require("print-this");
 let cvform = document.querySelector("#cv-form");
@@ -34,11 +34,13 @@ cvform?.addEventListener("submit", (e) => {
     const institution = document.getElementById("institution").value;
     const graduationDateStart = document.getElementById("graduation-date-start").value;
     const graduationDateEnd = document.getElementById("graduation-date-end").value;
+    // Experience
     const jobTitle = document.getElementById("job-title").value;
     const company = document.getElementById("company").value;
     const startDate = document.getElementById("start-date").value;
     const endDate = document.getElementById("end-date").value;
     const jobDescription = document.getElementById("job-description").value;
+    // Experience
     const jobTitle2 = document.getElementById("job-title2").value;
     const company2 = document.getElementById("company2").value;
     const startDate2 = document.getElementById("start-date2").value;
@@ -67,11 +69,11 @@ cvform?.addEventListener("submit", (e) => {
     document.getElementById("display-start-date").textContent = startDate;
     document.getElementById("display-end-date").textContent = endDate;
     document.getElementById("display-discription").textContent = jobDescription;
-    document.getElementById("display-job-title2").textContent = jobTitle;
-    document.getElementById("display-company2").textContent = company;
-    document.getElementById("display-start-date2").textContent = startDate;
-    document.getElementById("display-end-date2").textContent = endDate;
-    document.getElementById("display-discription2").textContent = jobDescription;
+    document.getElementById("display-job-title2").textContent = jobTitle2;
+    document.getElementById("display-company2").textContent = company2;
+    document.getElementById("display-start-date2").textContent = startDate2;
+    document.getElementById("display-end-date2").textContent = endDate2;
+    document.getElementById("display-discription2").textContent = jobDescription2;
     // ******* Skills *********
     let skills = document.getElementsByClassName("sfield");
     let skillsStr = "";

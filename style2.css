@@ -417,6 +417,7 @@ footer h3 {
   font-size: 1rem;
 }
 
+
 /* media queries */
 
 @media (max-width: 760px) {
@@ -461,6 +462,7 @@ footer h3 {
   .container {
     border-radius: 6px;
     width: 95%;
+    margin-top: 45px;
   }
   #hide-img2 {
     width: 80%;
