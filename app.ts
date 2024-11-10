@@ -1,3 +1,6 @@
+// import jQuery from "jquery";
+import "print-this";
+
 let cvform = document.querySelector("#cv-form") as HTMLFormElement;
 let skillBtn = document.querySelector("#skills-btn") as HTMLButtonElement;
 let skillList = document.querySelector(".skills") as HTMLElement;
@@ -28,6 +31,8 @@ cvform?.addEventListener("submit", (e: Event) => {
   let phone = (document.getElementById("contactField") as HTMLInputElement).value;
   let email = (document.getElementById("emailField") as HTMLInputElement).value;
   let address = (document.getElementById("addressField") as HTMLInputElement).value;
+  const profession = (document.getElementById("professionField") as HTMLInputElement).value;
+  const about = (document.getElementById("aboutField") as HTMLInputElement).value;
 
   // School
   const degree = (document.getElementById("degree") as HTMLInputElement).value;
@@ -41,9 +46,13 @@ cvform?.addEventListener("submit", (e: Event) => {
   const startDate = (document.getElementById("start-date") as HTMLInputElement).value;
   const endDate = (document.getElementById("end-date") as HTMLInputElement).value;
   const jobDescription = (document.getElementById("job-description") as HTMLInputElement).value;
-  const profession = (document.getElementById("professionField") as HTMLInputElement).value;
-  const about = (document.getElementById("aboutField") as HTMLInputElement).value;
 
+
+  const jobTitle2 = (document.getElementById("job-title2") as HTMLInputElement).value;
+  const company2 = (document.getElementById("company2") as HTMLInputElement).value;
+  const startDate2 = (document.getElementById("start-date2") as HTMLInputElement).value;
+  const endDate2 = (document.getElementById("end-date2") as HTMLInputElement).value;
+  const jobDescription2 = (document.getElementById("job-description2") as HTMLInputElement).value;
 
   // links
   let Github = (document.getElementById("GithubField") as HTMLInputElement).value;
@@ -58,6 +67,7 @@ cvform?.addEventListener("submit", (e: Event) => {
   (document.getElementById("emailT") as HTMLElement).textContent = email;
   (document.getElementById("addressT") as HTMLElement).textContent = address;
   (document.getElementById("aboutT") as HTMLElement).textContent = about;
+  (document.getElementById("professionT") as HTMLElement).textContent = profession;
 
   // School
   (document.getElementById("display-degree") as HTMLElement).textContent = degree;
@@ -66,6 +76,7 @@ cvform?.addEventListener("submit", (e: Event) => {
   (document.getElementById("display-graduation-end") as HTMLElement).textContent = graduationDateEnd;
 
 
+  
 
   (document.getElementById("LinkedInT") as HTMLElement).textContent = linkedin;
   (document.getElementById("githubT") as HTMLElement).textContent = Github;
@@ -75,7 +86,14 @@ cvform?.addEventListener("submit", (e: Event) => {
   (document.getElementById("display-start-date") as HTMLElement).textContent = startDate;
   (document.getElementById("display-end-date") as HTMLElement).textContent = endDate;
   (document.getElementById("display-discription") as HTMLElement).textContent = jobDescription;
-  (document.getElementById("professionT") as HTMLElement).textContent = profession;
+
+  (document.getElementById("display-job-title2") as HTMLElement).textContent = jobTitle;
+  (document.getElementById("display-company2") as HTMLElement).textContent = company;
+  (document.getElementById("display-start-date2") as HTMLElement).textContent = startDate;
+  (document.getElementById("display-end-date2") as HTMLElement).textContent = endDate;
+  (document.getElementById("display-discription2") as HTMLElement).textContent = jobDescription;
+
+
 
 
   // ******* Skills *********
@@ -128,13 +146,16 @@ cvform?.addEventListener("submit", (e: Event) => {
 
 });
 
-function printCV() {
-  window.print();
-}
 
 editbtn?.addEventListener("click", () => {
   cvform.style.display = "block";
   cvTemplate.style.display = "none"
-
-
 })
+
+
+
+$(document).ready(function () {
+  $("#print").on("click", function () {
+      $(".container").printThis();
+  });
+});

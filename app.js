@@ -1,5 +1,7 @@
 "use strict";
 // Object.defineProperty(exports, "__esModule", { value: true });
+// import jQuery from "jquery";
+// require("print-this");
 let cvform = document.querySelector("#cv-form");
 let skillBtn = document.querySelector("#skills-btn");
 let skillList = document.querySelector(".skills");
@@ -25,6 +27,8 @@ cvform?.addEventListener("submit", (e) => {
     let phone = document.getElementById("contactField").value;
     let email = document.getElementById("emailField").value;
     let address = document.getElementById("addressField").value;
+    const profession = document.getElementById("professionField").value;
+    const about = document.getElementById("aboutField").value;
     // School
     const degree = document.getElementById("degree").value;
     const institution = document.getElementById("institution").value;
@@ -35,8 +39,11 @@ cvform?.addEventListener("submit", (e) => {
     const startDate = document.getElementById("start-date").value;
     const endDate = document.getElementById("end-date").value;
     const jobDescription = document.getElementById("job-description").value;
-    const profession = document.getElementById("professionField").value;
-    const about = document.getElementById("aboutField").value;
+    const jobTitle2 = document.getElementById("job-title2").value;
+    const company2 = document.getElementById("company2").value;
+    const startDate2 = document.getElementById("start-date2").value;
+    const endDate2 = document.getElementById("end-date2").value;
+    const jobDescription2 = document.getElementById("job-description2").value;
     // links
     let Github = document.getElementById("GithubField").value;
     let linkedin = document.getElementById("linkedinField").value;
@@ -47,6 +54,7 @@ cvform?.addEventListener("submit", (e) => {
     document.getElementById("emailT").textContent = email;
     document.getElementById("addressT").textContent = address;
     document.getElementById("aboutT").textContent = about;
+    document.getElementById("professionT").textContent = profession;
     // School
     document.getElementById("display-degree").textContent = degree;
     document.getElementById("display-institution").textContent = institution;
@@ -59,7 +67,11 @@ cvform?.addEventListener("submit", (e) => {
     document.getElementById("display-start-date").textContent = startDate;
     document.getElementById("display-end-date").textContent = endDate;
     document.getElementById("display-discription").textContent = jobDescription;
-    document.getElementById("professionT").textContent = profession;
+    document.getElementById("display-job-title2").textContent = jobTitle;
+    document.getElementById("display-company2").textContent = company;
+    document.getElementById("display-start-date2").textContent = startDate;
+    document.getElementById("display-end-date2").textContent = endDate;
+    document.getElementById("display-discription2").textContent = jobDescription;
     // ******* Skills *********
     let skills = document.getElementsByClassName("sfield");
     let skillsStr = "";
@@ -99,10 +111,12 @@ cvform?.addEventListener("submit", (e) => {
         }
     });
 });
-function printCV() {
-    window.print();
-}
 editbtn?.addEventListener("click", () => {
     cvform.style.display = "block";
     cvTemplate.style.display = "none";
+});
+$(document).ready(function () {
+    $("#print").on("click", function () {
+        $(".container").printThis();
+    });
 });
