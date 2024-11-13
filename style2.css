@@ -8,7 +8,7 @@
   box-sizing: border-box;
   font-family: poppins;
 }
-.container1{
+.container1 {
   background-color: #ffffff;
 }
 
@@ -29,7 +29,7 @@ nav {
   width: 70px;
   background: transparent;
 }
-.icon{
+.icon {
   display: none;
 }
 
@@ -71,9 +71,8 @@ nav a:hover::before {
   background-color: #1170cd;
 }
 
-.container1{
+.container1 {
   padding-top: 100px;
-  
 }
 
 .container {
@@ -97,9 +96,9 @@ nav a:hover::before {
 }
 
 label {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  color: #51525b;
+  color: #5e5e60;
   padding: 20px 0;
 }
 
@@ -120,11 +119,18 @@ label {
 textarea {
   padding: 8px 10px;
   width: 100%;
-  border: 2px solid gray;
+  border: 2px solid rgb(57, 127, 165);
   border-radius: 8px;
   outline: none;
 }
-
+.form-group input:focus {
+  box-shadow: 2px 4px 5px 2px rgb(146, 143, 143);
+  border: 2px solid rgb(35, 132, 184);
+}
+.form-group textarea:focus {
+  box-shadow: 2px 4px 5px 2px rgb(146, 143, 143);
+  border: 2px solid rgb(35, 132, 184);
+}
 .button {
   display: flex;
   justify-content: center;
@@ -173,19 +179,25 @@ footer h3 {
 }
 .container1 #heading {
   font-size: 20px;
-  background-color: rgb(44, 48, 46);
+  background-color: rgb(19, 86, 119);
   color: rgb(255, 255, 255);
   padding: 8px 4px;
   border-radius: 5px;
   text-align: center;
-  width: 80%;
+  width: 100%;
 }
-
-
-
-
-
-
+.container1 #heading1 {
+  font-size: 20px;
+  background-color: rgb(19, 86, 119);
+  color: rgb(255, 255, 255);
+  padding: 8px 4px;
+  border-radius: 5px;
+  text-align: center;
+  width: 94%;
+}
+.col2 {
+  padding-top: 30px;
+}
 
 .wrapper {
   padding-top: 9vw;
@@ -214,11 +226,10 @@ footer h3 {
   border-radius: 4px;
   object-fit: cover;
 }
-#imgTemplate{
+#imgTemplate {
   width: 80%;
   height: 400px;
   object-fit: cover;
-
 }
 #professionT {
   padding: 3px 8px;
@@ -253,7 +264,6 @@ footer h3 {
   padding: 10px 0 0 0px;
   line-height: 19px;
 }
-
 
 .about {
   margin-top: 40px;
@@ -416,7 +426,6 @@ footer h3 {
 .skills ul li {
   font-size: 1rem;
 }
-
 
 /* media queries */
 

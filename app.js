@@ -104,7 +104,7 @@ cvform?.addEventListener("submit", (e) => {
     // shareable link
     sharebtn.addEventListener("click", async () => {
         try {
-            const shareableLink = `https://milestone5-unique-path-and-shareable-link-ayesha.vercel.app/?username.value/${names.value.replace(/\s+/g, '_')}`;
+            const shareableLink = `https://milestone5-unique-path-and-shareable-link-ayesha.vercel.app/createResume.html?username.value/${names.value.replace(/\s+/g, '_')}`;
             await navigator.clipboard.writeText(shareableLink);
             alert("Shareable linkcopied to Clipboard!");
         }
@@ -113,8 +113,6 @@ cvform?.addEventListener("submit", (e) => {
         }
     });
 });
-
-
 editbtn?.addEventListener("click", () => {
     cvform.style.display = "block";
     cvTemplate.style.display = "none";

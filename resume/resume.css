@@ -311,6 +311,7 @@ nav a:hover::before {
   .container {
     border-radius: 6px;
     width: 93%;
+    margin-top: 70px;
     box-shadow: 20px 40px 40px 3px rgb(20, 18, 18);
   }
 .logo img{
@@ -344,7 +345,9 @@ nav a:hover::before {
   }
 }
 @media (max-width:800px) {
-  
+  .container{
+    margin-top: 60px;
+  }
 /* menu */
 /* Navbar */
 header {

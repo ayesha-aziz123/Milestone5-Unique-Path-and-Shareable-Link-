@@ -40,14 +40,14 @@ cvform?.addEventListener("submit", (e: Event) => {
   const graduationDateStart = (document.getElementById("graduation-date-start") as HTMLInputElement).value;
   const graduationDateEnd = (document.getElementById("graduation-date-end") as HTMLInputElement).value;
 
-// Experience
+  // Experience
   const jobTitle = (document.getElementById("job-title") as HTMLInputElement).value;
   const company = (document.getElementById("company") as HTMLInputElement).value;
   const startDate = (document.getElementById("start-date") as HTMLInputElement).value;
   const endDate = (document.getElementById("end-date") as HTMLInputElement).value;
   const jobDescription = (document.getElementById("job-description") as HTMLInputElement).value;
 
-// Experience
+  // Experience
   const jobTitle2 = (document.getElementById("job-title2") as HTMLInputElement).value;
   const company2 = (document.getElementById("company2") as HTMLInputElement).value;
   const startDate2 = (document.getElementById("start-date2") as HTMLInputElement).value;
@@ -57,9 +57,6 @@ cvform?.addEventListener("submit", (e: Event) => {
   // links
   let Github = (document.getElementById("GithubField") as HTMLInputElement).value;
   let linkedin = (document.getElementById("linkedinField") as HTMLInputElement).value;
-
-
-
   (document.getElementById("currentlyT") as HTMLElement).textContent = currently_live;
   (document.getElementById("DOBT") as HTMLElement).textContent = DOB;
   (document.getElementById("nameT") as HTMLElement).textContent = name;
@@ -76,7 +73,7 @@ cvform?.addEventListener("submit", (e: Event) => {
   (document.getElementById("display-graduation-end") as HTMLElement).textContent = graduationDateEnd;
 
 
-  
+
 
   (document.getElementById("LinkedInT") as HTMLElement).textContent = linkedin;
   (document.getElementById("githubT") as HTMLElement).textContent = Github;
@@ -133,7 +130,7 @@ cvform?.addEventListener("submit", (e: Event) => {
   // shareable link
   sharebtn.addEventListener("click", async () => {
     try {
-      const shareableLink = `https://milestone5-unique-path-and-shareable-link-ayesha.vercel.app/?username.value/${names.value.replace(/\s+/g, '_')}`
+      const shareableLink = `https://milestone5-unique-path-and-shareable-link-ayesha.vercel.app/createResume.html?username.value/${names.value.replace(/\s+/g, '_')}`
 
       await navigator.clipboard.writeText(shareableLink)
       alert("Shareable linkcopied to Clipboard!")
@@ -156,6 +153,6 @@ editbtn?.addEventListener("click", () => {
 
 $(document).ready(function () {
   $("#print").on("click", function () {
-      $(".container").printThis();
+    $(".container").printThis();
   });
 });
