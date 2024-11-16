@@ -24,6 +24,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 3.5rem;
+  width: 100%;
 }
 .logo img {
   width: 70px;
@@ -81,6 +82,8 @@ nav a:hover::before {
 .wrapper {
   background-color: #aca02d;
   padding: 20px 2px;
+  padding-top: 9vw;
+  /* border-radius: 9px; */
 }
 .box1-generate {
   display: flex;
@@ -150,6 +153,7 @@ button {
 #cv-template {
   display: none;
 }
+
 .cv-btn {
   display: flex;
   justify-content: center;
@@ -199,10 +203,6 @@ footer h3 {
   padding-top: 30px;
 }
 
-.wrapper {
-  padding-top: 9vw;
-  border-radius: 9px;
-}
 .container {
   flex-wrap: wrap;
   background-color: #ffffff;
@@ -546,5 +546,11 @@ footer h3 {
   }
   .col2 {
     width: 90%;
+  }
+}
+
+@media print {
+  #skills-btn {
+    display: none;
   }
 }

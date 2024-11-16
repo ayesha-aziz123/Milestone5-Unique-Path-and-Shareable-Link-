@@ -92,7 +92,6 @@ nav a:hover::before {
 
 .hero-btn {
   display: flex;
-  /* justify-content: center; */
   gap: 2rem;
 }
 .hero-btn a {
@@ -145,7 +144,7 @@ footer {
   background-color: #313b47;
   /* padding: 7rem 0; */
   color: white;
-  width: 99.9vw;
+  /* width: 99.9vw; */
 }
 .footer-container {
   display: flex;
